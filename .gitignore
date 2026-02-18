@@ -28,3 +28,20 @@ build/
 # Code coverage
 *.gcno
 *.gcda
+
+# Screenshots in root (debug captures may contain personal info)
+/*.png
+/*.jpg
+/*.jpeg
+
+# Secrets and credentials
+*.p12
+*.mobileprovision
+*.provisionprofile
+secrets/
+*.env
+*.pem
+*.key
+
+# Xcode signing
+*.xcarchive
