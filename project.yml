@@ -1,0 +1,49 @@
+name: PeezyPGP
+options:
+  bundleIdPrefix: com.peezypgp
+  deploymentTarget:
+    iOS: "15.0"
+    macOS: "12.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    INFOPLIST_FILE: Configuration/Info.plist
+    CODE_SIGN_ENTITLEMENTS: Configuration/PeezyPGP.entitlements
+    ENABLE_HARDENED_RUNTIME: YES
+
+targets:
+  PeezyPGP-iOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+        excludes:
+          - "**/macOS/**"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.peezypgp.ios
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: YES
+    info:
+      path: Configuration/Info.plist
+    entitlements:
+      path: Configuration/PeezyPGP.entitlements
+
+  PeezyPGP-macOS:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.peezypgp.macos
+        MACOSX_DEPLOYMENT_TARGET: "12.0"
+    info:
+      path: Configuration/Info.plist
+    entitlements:
+      path: Configuration/PeezyPGP.entitlements

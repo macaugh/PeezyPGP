@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		087F7A1DFD9E6B00E6CDD06F /* PacketIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E870B76965DEE5D01078E /* PacketIO.swift */; };
+		13E51B7F5EDCBC05385607BA /* KeyGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973D30B30ED1E4FC21A4FB8 /* KeyGenerationView.swift */; };
+		167DFD706A25F988E1A37467 /* EncryptDecryptViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282516DF2C0D10394CD377A3 /* EncryptDecryptViews.swift */; };
+		18155BC3F3E8CA356B087155 /* AES256Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C59403A4418D40993970AB /* AES256Operations.swift */; };
+		1C556D69C0749BF554569BDC /* EncryptDecryptViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282516DF2C0D10394CD377A3 /* EncryptDecryptViews.swift */; };
+		1F59260227A2F76FCF1CAA00 /* HKDFOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EFD5E92C6EF5AA56B99A4 /* HKDFOperations.swift */; };
+		21B1E00C8E6D20C75377C141 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF2E5865C404F9FAAFB370 /* SecureBytes.swift */; };
+		236091A138407E1321FCF9B7 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D100DD215DDED7CC5D226 /* KeychainManager.swift */; };
+		30D972DC5BC5CD07D8B85A73 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF2E5865C404F9FAAFB370 /* SecureBytes.swift */; };
+		321DCC764A816A42E8AA010D /* PacketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7123138615F09DF88B216 /* PacketTypes.swift */; };
+		3526FF90D1720917E5638ACB /* ArmorCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B661FD88FA0B61F496010 /* ArmorCodec.swift */; };
+		35DDB18EAABCBDA900658F1D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB157E2F846D95C69779627D /* SettingsView.swift */; };
+		44F8BD3E4B600FC865A2E431 /* PacketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7123138615F09DF88B216 /* PacketTypes.swift */; };
+		4700573D40603A3D4F1D6B8C /* KeyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5636FEBAC41261232980A3 /* KeyListView.swift */; };
+		550892B7CDBADCB3A0FB3255 /* Ed25519Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7230D726787597BB9C809AF8 /* Ed25519Operations.swift */; };
+		5A298F6EAEB8F43AC84866BE /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D100DD215DDED7CC5D226 /* KeychainManager.swift */; };
+		641BB0B40253EC73DAB84006 /* ArmorCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B661FD88FA0B61F496010 /* ArmorCodec.swift */; };
+		6C1CB53DACDCA19F404993D8 /* AES256Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C59403A4418D40993970AB /* AES256Operations.swift */; };
+		75F9D70B18E9DFC45C1DA761 /* HKDFOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2EFD5E92C6EF5AA56B99A4 /* HKDFOperations.swift */; };
+		823A7C8CD4507AE937D7C6C7 /* PacketIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E870B76965DEE5D01078E /* PacketIO.swift */; };
+		86AAC7AA924185EB3D84256A /* KeyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5636FEBAC41261232980A3 /* KeyListView.swift */; };
+		ACED5C855198696EC14CFB6A /* SignVerifyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9C577605718A492A80D92 /* SignVerifyViews.swift */; };
+		B8A774F27807F888CECB5AD2 /* KeyGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973D30B30ED1E4FC21A4FB8 /* KeyGenerationView.swift */; };
+		D861FCE915C0F6CA0756A35A /* MacMenuCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62100ABF18227E03EA905E1D /* MacMenuCommands.swift */; };
+		D893BB2EDB5A98A507C0F778 /* Ed25519Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7230D726787597BB9C809AF8 /* Ed25519Operations.swift */; };
+		DE314EE033259AF3EA13EA7C /* OpenPGPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DA32DC0ECB73290714B23 /* OpenPGPEngine.swift */; };
+		E4F67171FF871461E833F0AE /* SignVerifyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9C577605718A492A80D92 /* SignVerifyViews.swift */; };
+		E5F11D19BA901D1587186440 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB157E2F846D95C69779627D /* SettingsView.swift */; };
+		E6D568C7E187636C7AF8DF0A /* X25519Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD02AD2580BEE56B83CCEA3D /* X25519Operations.swift */; };
+		F268C2EEEB5CC3E4EC90AB62 /* PeezyPGPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D219FEB5DEC291BBF338A54 /* PeezyPGPApp.swift */; };
+		F3F80454A079B05050EBCB42 /* PeezyPGPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D219FEB5DEC291BBF338A54 /* PeezyPGPApp.swift */; };
+		F96B6BBB215EA31BF31184A5 /* X25519Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD02AD2580BEE56B83CCEA3D /* X25519Operations.swift */; };
+		F99139F7DDA251CB10A79E7B /* SecureEnclaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E1FB203BC18875AB49F118 /* SecureEnclaveManager.swift */; };
+		FA0A460E8EF546F5E149E938 /* OpenPGPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DA32DC0ECB73290714B23 /* OpenPGPEngine.swift */; };
+		FF2B2B7E5CB963245FAD994E /* SecureEnclaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E1FB203BC18875AB49F118 /* SecureEnclaveManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0973D30B30ED1E4FC21A4FB8 /* KeyGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGenerationView.swift; sourceTree = "<group>"; };
+		09C59403A4418D40993970AB /* AES256Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256Operations.swift; sourceTree = "<group>"; };
+		0CC7123138615F09DF88B216 /* PacketTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTypes.swift; sourceTree = "<group>"; };
+		1F8D100DD215DDED7CC5D226 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		282516DF2C0D10394CD377A3 /* EncryptDecryptViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptDecryptViews.swift; sourceTree = "<group>"; };
+		36E1FB203BC18875AB49F118 /* SecureEnclaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclaveManager.swift; sourceTree = "<group>"; };
+		40C9C577605718A492A80D92 /* SignVerifyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignVerifyViews.swift; sourceTree = "<group>"; };
+		5F2EFD5E92C6EF5AA56B99A4 /* HKDFOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDFOperations.swift; sourceTree = "<group>"; };
+		62100ABF18227E03EA905E1D /* MacMenuCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacMenuCommands.swift; sourceTree = "<group>"; };
+		714B661FD88FA0B61F496010 /* ArmorCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorCodec.swift; sourceTree = "<group>"; };
+		7230D726787597BB9C809AF8 /* Ed25519Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ed25519Operations.swift; sourceTree = "<group>"; };
+		833E870B76965DEE5D01078E /* PacketIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketIO.swift; sourceTree = "<group>"; };
+		947DA32DC0ECB73290714B23 /* OpenPGPEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPGPEngine.swift; sourceTree = "<group>"; };
+		964C5EB113FE50C84917D461 /* PeezyPGP-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "PeezyPGP-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D219FEB5DEC291BBF338A54 /* PeezyPGPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeezyPGPApp.swift; sourceTree = "<group>"; };
+		A906D6700138EA96B855BC90 /* PeezyPGP-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeezyPGP-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB157E2F846D95C69779627D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BD02AD2580BEE56B83CCEA3D /* X25519Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X25519Operations.swift; sourceTree = "<group>"; };
+		D4DF2E5865C404F9FAAFB370 /* SecureBytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureBytes.swift; sourceTree = "<group>"; };
+		FE5636FEBAC41261232980A3 /* KeyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0FE6F23B0E121231CE0CB6E0 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				E0AE354DDC62646984A4A66B /* Memory */,
+				8080B466ACFBF7808F8AC202 /* OpenPGP */,
+				478CB2D4440ED5DD51A7DBD1 /* Primitives */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		131A70BF2805F080C5F7B245 /* Packets */ = {
+			isa = PBXGroup;
+			children = (
+				833E870B76965DEE5D01078E /* PacketIO.swift */,
+				0CC7123138615F09DF88B216 /* PacketTypes.swift */,
+			);
+			path = Packets;
+			sourceTree = "<group>";
+		};
+		453D07696F7D3C4E8B8252C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				964C5EB113FE50C84917D461 /* PeezyPGP-iOS.app */,
+				A906D6700138EA96B855BC90 /* PeezyPGP-macOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		478CB2D4440ED5DD51A7DBD1 /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				09C59403A4418D40993970AB /* AES256Operations.swift */,
+				7230D726787597BB9C809AF8 /* Ed25519Operations.swift */,
+				5F2EFD5E92C6EF5AA56B99A4 /* HKDFOperations.swift */,
+				BD02AD2580BEE56B83CCEA3D /* X25519Operations.swift */,
+			);
+			path = Primitives;
+			sourceTree = "<group>";
+		};
+		56A0272739C24EBA9CB99C0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A574C52A01722580DDD5EAC6 /* Encrypt */,
+				DE095423841D22CE83906CF9 /* Keys */,
+				5AE474B77683A17BE64FB605 /* Settings */,
+				FEFAE7A9E44C3480A2DE9CE5 /* Sign */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AE474B77683A17BE64FB605 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BB157E2F846D95C69779627D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		607BA7F472640E8605B084BB /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D100DD215DDED7CC5D226 /* KeychainManager.swift */,
+				36E1FB203BC18875AB49F118 /* SecureEnclaveManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		8080B466ACFBF7808F8AC202 /* OpenPGP */ = {
+			isa = PBXGroup;
+			children = (
+				947DA32DC0ECB73290714B23 /* OpenPGPEngine.swift */,
+				EA4B959EE61F6BB8606A469F /* Armor */,
+				131A70BF2805F080C5F7B245 /* Packets */,
+			);
+			path = OpenPGP;
+			sourceTree = "<group>";
+		};
+		8FF82FF2FB6D17AC1AB073C3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E6C68F8BC58AAB9BCE7136B2 /* App */,
+				0FE6F23B0E121231CE0CB6E0 /* Crypto */,
+				BEC4ADAEBE60F7DDD6CCB55B /* Platform */,
+				B332494E3EC5D24C5516202C /* Presentation */,
+				607BA7F472640E8605B084BB /* Storage */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A574C52A01722580DDD5EAC6 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				282516DF2C0D10394CD377A3 /* EncryptDecryptViews.swift */,
+			);
+			path = Encrypt;
+			sourceTree = "<group>";
+		};
+		B332494E3EC5D24C5516202C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				56A0272739C24EBA9CB99C0D /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BEC4ADAEBE60F7DDD6CCB55B /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				C365455C6BEA8F1FCCFE8D4B /* macOS */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		C365455C6BEA8F1FCCFE8D4B /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				62100ABF18227E03EA905E1D /* MacMenuCommands.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		DDBB8293E81D90C46C3B5ADD = {
+			isa = PBXGroup;
+			children = (
+				8FF82FF2FB6D17AC1AB073C3 /* Sources */,
+				453D07696F7D3C4E8B8252C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE095423841D22CE83906CF9 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				0973D30B30ED1E4FC21A4FB8 /* KeyGenerationView.swift */,
+				FE5636FEBAC41261232980A3 /* KeyListView.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		E0AE354DDC62646984A4A66B /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				D4DF2E5865C404F9FAAFB370 /* SecureBytes.swift */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
+		E6C68F8BC58AAB9BCE7136B2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9D219FEB5DEC291BBF338A54 /* PeezyPGPApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EA4B959EE61F6BB8606A469F /* Armor */ = {
+			isa = PBXGroup;
+			children = (
+				714B661FD88FA0B61F496010 /* ArmorCodec.swift */,
+			);
+			path = Armor;
+			sourceTree = "<group>";
+		};
+		FEFAE7A9E44C3480A2DE9CE5 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				40C9C577605718A492A80D92 /* SignVerifyViews.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BCA62C3CBAB8E0F845A61F7 /* PeezyPGP-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64F81110DF11530FC0D968AF /* Build configuration list for PBXNativeTarget "PeezyPGP-macOS" */;
+			buildPhases = (
+				9E8BE82183F941D64F0F9B57 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeezyPGP-macOS";
+			packageProductDependencies = (
+			);
+			productName = "PeezyPGP-macOS";
+			productReference = A906D6700138EA96B855BC90 /* PeezyPGP-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97F66D081AAF4D54BD1DA0AF /* PeezyPGP-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0726DD52DDB75E15E3EDDD3 /* Build configuration list for PBXNativeTarget "PeezyPGP-iOS" */;
+			buildPhases = (
+				9099DDC9E198686B68CBEFB4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeezyPGP-iOS";
+			packageProductDependencies = (
+			);
+			productName = "PeezyPGP-iOS";
+			productReference = 964C5EB113FE50C84917D461 /* PeezyPGP-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		495D603DB56641DB4D7799A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = B0B64661E38F6ADBF8344280 /* Build configuration list for PBXProject "PeezyPGP" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = DDBB8293E81D90C46C3B5ADD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97F66D081AAF4D54BD1DA0AF /* PeezyPGP-iOS */,
+				6BCA62C3CBAB8E0F845A61F7 /* PeezyPGP-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9099DDC9E198686B68CBEFB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C1CB53DACDCA19F404993D8 /* AES256Operations.swift in Sources */,
+				3526FF90D1720917E5638ACB /* ArmorCodec.swift in Sources */,
+				D893BB2EDB5A98A507C0F778 /* Ed25519Operations.swift in Sources */,
+				1C556D69C0749BF554569BDC /* EncryptDecryptViews.swift in Sources */,
+				1F59260227A2F76FCF1CAA00 /* HKDFOperations.swift in Sources */,
+				13E51B7F5EDCBC05385607BA /* KeyGenerationView.swift in Sources */,
+				86AAC7AA924185EB3D84256A /* KeyListView.swift in Sources */,
+				236091A138407E1321FCF9B7 /* KeychainManager.swift in Sources */,
+				FA0A460E8EF546F5E149E938 /* OpenPGPEngine.swift in Sources */,
+				087F7A1DFD9E6B00E6CDD06F /* PacketIO.swift in Sources */,
+				321DCC764A816A42E8AA010D /* PacketTypes.swift in Sources */,
+				F3F80454A079B05050EBCB42 /* PeezyPGPApp.swift in Sources */,
+				21B1E00C8E6D20C75377C141 /* SecureBytes.swift in Sources */,
+				F99139F7DDA251CB10A79E7B /* SecureEnclaveManager.swift in Sources */,
+				E5F11D19BA901D1587186440 /* SettingsView.swift in Sources */,
+				ACED5C855198696EC14CFB6A /* SignVerifyViews.swift in Sources */,
+				E6D568C7E187636C7AF8DF0A /* X25519Operations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E8BE82183F941D64F0F9B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18155BC3F3E8CA356B087155 /* AES256Operations.swift in Sources */,
+				641BB0B40253EC73DAB84006 /* ArmorCodec.swift in Sources */,
+				550892B7CDBADCB3A0FB3255 /* Ed25519Operations.swift in Sources */,
+				167DFD706A25F988E1A37467 /* EncryptDecryptViews.swift in Sources */,
+				75F9D70B18E9DFC45C1DA761 /* HKDFOperations.swift in Sources */,
+				B8A774F27807F888CECB5AD2 /* KeyGenerationView.swift in Sources */,
+				4700573D40603A3D4F1D6B8C /* KeyListView.swift in Sources */,
+				5A298F6EAEB8F43AC84866BE /* KeychainManager.swift in Sources */,
+				D861FCE915C0F6CA0756A35A /* MacMenuCommands.swift in Sources */,
+				DE314EE033259AF3EA13EA7C /* OpenPGPEngine.swift in Sources */,
+				823A7C8CD4507AE937D7C6C7 /* PacketIO.swift in Sources */,
+				44F8BD3E4B600FC865A2E431 /* PacketTypes.swift in Sources */,
+				F268C2EEEB5CC3E4EC90AB62 /* PeezyPGPApp.swift in Sources */,
+				30D972DC5BC5CD07D8B85A73 /* SecureBytes.swift in Sources */,
+				FF2B2B7E5CB963245FAD994E /* SecureEnclaveManager.swift in Sources */,
+				35DDB18EAABCBDA900658F1D /* SettingsView.swift in Sources */,
+				E4F67171FF871461E833F0AE /* SignVerifyViews.swift in Sources */,
+				F96B6BBB215EA31BF31184A5 /* X25519Operations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		32A990D99D717E869E55C1F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Configuration/PeezyPGP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.peezypgp.ios;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		574CAEC3CA41D83B738E10C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/PeezyPGP.entitlements;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		5C5F4FCAB8FE37B79DB4904E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Configuration/PeezyPGP.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peezypgp.macos;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		60C8DA00AD4B8850CB77684E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Configuration/PeezyPGP.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peezypgp.macos;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AF6968E6B2EC7BC3B6ABFA84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Configuration/PeezyPGP.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.peezypgp.ios;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF2BD379365BFE66880088DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/PeezyPGP.entitlements;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Configuration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64F81110DF11530FC0D968AF /* Build configuration list for PBXNativeTarget "PeezyPGP-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C5F4FCAB8FE37B79DB4904E /* Debug */,
+				60C8DA00AD4B8850CB77684E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B0B64661E38F6ADBF8344280 /* Build configuration list for PBXProject "PeezyPGP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				574CAEC3CA41D83B738E10C3 /* Debug */,
+				EF2BD379365BFE66880088DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F0726DD52DDB75E15E3EDDD3 /* Build configuration list for PBXNativeTarget "PeezyPGP-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32A990D99D717E869E55C1F7 /* Debug */,
+				AF6968E6B2EC7BC3B6ABFA84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 495D603DB56641DB4D7799A4 /* Project object */;
+}
