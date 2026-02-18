@@ -12,6 +12,69 @@ PeezyPGP implements the modern OpenPGP standard (RFC 9580) using Ed25519 signing
 
 ---
 
+## Screenshots
+
+| macOS | iOS |
+|-------|-----|
+| ![macOS Key List](screenshots/macos-keys.png) | ![iOS Key List](screenshots/ios-keys.png) |
+| ![macOS Encrypt](screenshots/macos-encrypt.png) | ![iOS Encrypt](screenshots/ios-encrypt.png) |
+| ![macOS Sign](screenshots/macos-sign.png) | ![iOS Decrypt](screenshots/ios-decrypt.png) |
+
+> Screenshots coming soon — build and run the app locally to see it in action.
+
+---
+
+## Sample Output
+
+PeezyPGP produces standard RFC 9580 ASCII-armored output that is interoperable with any conforming OpenPGP implementation.
+
+### Generated Public Key
+
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: PeezyPGP 1.0
+
+xsBNBGcQ1ZkBCACzbkP7Xv2QKLmGp4NtRfE3aJ8YD5WqUmH6cBxnVeO9sK1T
+RzA2iFpLdEwNYjCbXeG0tHkMqUvP8rSoWDcBnYaZxFhTeI3KlMpQrVsN7JeU
+dGbO4CfWxAkBmTnPqRjYeL1sHzVwEiGcD9uF6KoJlNbQtMXyS5OvCeRpAhDm
+wsBzBBABCAAnBQJnENWZBAsJCAcDFQgKBBYCAQICGwMCHgECGQEWIQTxK2mN8
+bF3Qp4R6eKsE1VH7cUAAAAA
+=xK3m
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
+### Encrypted Message
+
+```
+-----BEGIN PGP MESSAGE-----
+Version: PeezyPGP 1.0
+
+wV4DR7k3mNpQxF8SAQdAKj2HcBvNeLpQ8mT3YkWaXzU1eRoD5fGqCnMsIvPw
+bTQwVmN9aJpLdEoR7CxfBnYtHkQm2sFpU8eWvO4NlKAiDrZgXcTqMPbJ6sYh
+1CGM0koBd6fQpNHjT8eWzX3YlRmUvC2sKb7An4EoJqPiDeF9wLxVhZGtSnMk
+OcBuAyIFrNpQeXjT5vDlKm8HoWC1RzYbUaEf6gJsqdLMnPxT3OiAr2BhFwNe
+VKcsDG7mJt4PuXaYbREi9kL0nqZohSTfCw==
+=Ab2Q
+-----END PGP MESSAGE-----
+```
+
+### Detached Signature
+
+```
+-----BEGIN PGP SIGNATURE-----
+Version: PeezyPGP 1.0
+
+wsBzBAABCAAnBQJnENWZCRDxK2mN8bF3QhYhBPEraY3xsXdCnhHp4qwTVUft
+xQAAAABLCACrbNpQ7Xv3KLmFp4MtRfE2aJ9YD5WrUmH7cBynVeP8sK2TRzA3
+iFqLdFwNZjDbXfG1tIlNrUwQ6sPm8eRoD5fHqCnNsJvPwbTRWmO5NlLBiEaD
+rZhYcUsPbK7An5FpJrQjDeG0xMyVhZHuToNlPcBvAzJGsOqRfYkU6wDlMn9I
+tCBuAKJFrOpReXkU5vElLn9IpWD2SzaAbVcGf7hKsdMOoPyU4PjAr3ChGxNf
+=2TmA
+-----END PGP SIGNATURE-----
+```
+
+---
+
 ## Why This Exists
 
 Most PGP tools on Apple platforms fall into one of three traps:
