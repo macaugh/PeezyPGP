@@ -38,13 +38,17 @@ struct KeyGenerationView: View {
             Form {
                 Section {
                     TextField("Name", text: $name)
+                        #if os(iOS)
                         .textContentType(.name)
+                        #endif
                         .autocorrectionDisabled()
 
                     TextField("Email (optional)", text: $email)
+                        #if os(iOS)
                         .textContentType(.emailAddress)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
+                        #endif
                         .autocorrectionDisabled()
                 } header: {
                     Text("Identity")
@@ -61,7 +65,9 @@ struct KeyGenerationView: View {
                                 SecureField("Passphrase", text: $passphrase)
                             }
                         }
+                        #if os(iOS)
                         .textContentType(.newPassword)
+                        #endif
                         .autocorrectionDisabled()
 
                         Button(action: { showPassphrase.toggle() }) {
@@ -76,7 +82,9 @@ struct KeyGenerationView: View {
                     }
 
                     SecureField("Confirm Passphrase", text: $confirmPassphrase)
+                        #if os(iOS)
                         .textContentType(.newPassword)
+                        #endif
 
                     if !confirmPassphrase.isEmpty && passphrase != confirmPassphrase {
                         Label("Passphrases do not match", systemImage: "exclamationmark.triangle.fill")
@@ -118,7 +126,9 @@ struct KeyGenerationView: View {
                 }
             }
             .navigationTitle("Generate Key")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
@@ -283,7 +293,7 @@ struct KeyImportView: View {
                     .font(.system(.caption, design: .monospaced))
                     .frame(minHeight: 200)
                     .padding(8)
-                    .background(Color(.secondarySystemBackground))
+                    .background(Color.secondary.opacity(0.1))
                     .cornerRadius(8)
                     .padding(.horizontal)
 
@@ -303,7 +313,9 @@ struct KeyImportView: View {
             }
             .padding(.top)
             .navigationTitle("Import Key")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }

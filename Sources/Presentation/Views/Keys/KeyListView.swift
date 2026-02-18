@@ -25,6 +25,13 @@ struct KeyListView: View {
                                     .onTapGesture {
                                         selectedKey = key
                                     }
+                                    .contextMenu {
+                                        Button(role: .destructive) {
+                                            try? appState.deleteKey(keyID: key.id)
+                                        } label: {
+                                            Label("Delete Key", systemImage: "trash")
+                                        }
+                                    }
                             }
                             .onDelete(perform: deletePrivateKeys)
                         } header: {
@@ -36,6 +43,13 @@ struct KeyListView: View {
                                 KeyRowView(key: key)
                                     .onTapGesture {
                                         selectedKey = key
+                                    }
+                                    .contextMenu {
+                                        Button(role: .destructive) {
+                                            try? appState.deleteKey(keyID: key.id)
+                                        } label: {
+                                            Label("Delete Key", systemImage: "trash")
+                                        }
                                     }
                             }
                             .onDelete(perform: deletePublicKeys)
@@ -243,7 +257,9 @@ struct KeyDetailView: View {
                 }
             }
             .navigationTitle("Key Details")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Done") { dismiss() }
@@ -285,7 +301,7 @@ struct KeyExportView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Copy this key to share with others:")
+                    Text("Share your public key so others can encrypt messages to you.")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
 
@@ -293,8 +309,14 @@ struct KeyExportView: View {
                         .font(.system(.caption, design: .monospaced))
                         .textSelection(.enabled)
                         .padding()
-                        .background(Color(.secondarySystemBackground))
+                        .background(Color.secondary.opacity(0.1))
                         .cornerRadius(8)
+
+                    ShareLink(item: armor, subject: Text("My PGP Public Key"), message: Text(armor)) {
+                        Label("Share Public Key", systemImage: "square.and.arrow.up")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
 
                     Button(action: {
                         #if os(iOS)
@@ -307,12 +329,14 @@ struct KeyExportView: View {
                         Label("Copy to Clipboard", systemImage: "doc.on.doc")
                             .frame(maxWidth: .infinity)
                     }
-                    .buttonStyle(.borderedProminent)
+                    .buttonStyle(.bordered)
                 }
                 .padding()
             }
             .navigationTitle("Export Key")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Done") { dismiss() }

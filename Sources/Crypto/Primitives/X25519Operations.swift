@@ -84,7 +84,7 @@ public enum X25519Operations {
         let sharedSecret = try ourPrivateKey.sharedSecretFromKeyAgreement(with: theirPublicKey)
 
         // Extract raw bytes from SharedSecret
-        return sharedSecret.withUnsafeBytes { buffer in
+        return sharedSecret.withUnsafeBytes { (buffer: UnsafeRawBufferPointer) -> SecureBytes in
             SecureBytes(bytes: Array(buffer))
         }
     }
@@ -338,7 +338,7 @@ public enum AESKeyWrap {
 private extension Data {
     mutating func xor(with value: UInt64) {
         var v = value.bigEndian
-        withUnsafeBytes(of: &v) { valueBytes in
+        Swift.withUnsafeBytes(of: &v) { valueBytes in
             for i in 0..<8 {
                 self[i] ^= valueBytes[i]
             }

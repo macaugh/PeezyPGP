@@ -69,7 +69,7 @@ final class AppState: ObservableObject {
         let key = try openPGPEngine.generateKeyPair(params: params)
 
         // Store with hardware backing if available
-        try hardwareStorage.storeKey(key, requireBiometric: true)
+        try hardwareStorage.storeKey(key, requireBiometric: false)
 
         await MainActor.run {
             keys.append(key)

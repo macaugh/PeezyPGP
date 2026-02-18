@@ -53,7 +53,7 @@ public final class SecureBytes: @unchecked Sendable {
             let status = SecRandomCopyBytes(kSecRandomDefault, count, pointer)
             guard status == errSecSuccess else {
                 // Critical failure - zero and deallocate
-                memset_s(pointer, count, 0, count)
+                secureZeroMemory(pointer, count, 0, count)
                 pointer.deallocate()
                 fatalError("SecRandomCopyBytes failed with status \(status) - cannot generate secure random bytes")
             }
@@ -127,7 +127,7 @@ public final class SecureBytes: @unchecked Sendable {
         if let pointer = buffer.baseAddress, buffer.count > 0 {
             // Use memset_s which cannot be optimized away
             // This is critical - regular memset can be removed by compiler
-            memset_s(pointer, buffer.count, 0, buffer.count)
+            secureZeroMemory(pointer, buffer.count, 0, buffer.count)
 
             // Unlock memory
             munlock(pointer, buffer.count)
@@ -219,7 +219,7 @@ public final class SecureBytes: @unchecked Sendable {
 /// This is critical for security - regular memset can be removed if
 /// the compiler determines the memory is not used afterward
 @inline(never)
-private func memset_s(_ dest: UnsafeMutableRawPointer, _ destSize: Int, _ value: Int32, _ count: Int) {
+private func secureZeroMemory(_ dest: UnsafeMutableRawPointer, _ destSize: Int, _ value: Int32, _ count: Int) {
     // Volatile pointer prevents optimization
     let volatilePtr = UnsafeMutablePointer<UInt8>(OpaquePointer(dest))
 
@@ -239,7 +239,7 @@ public extension Data {
     mutating func zero() {
         guard !isEmpty else { return }
         withUnsafeMutableBytes { buffer in
-            memset_s(buffer.baseAddress!, buffer.count, 0, buffer.count)
+            secureZeroMemory(buffer.baseAddress!, buffer.count, 0, buffer.count)
         }
     }
 }
@@ -250,7 +250,7 @@ public extension Array where Element == UInt8 {
     mutating func zero() {
         guard !isEmpty else { return }
         withUnsafeMutableBytes { buffer in
-            memset_s(buffer.baseAddress!, buffer.count, 0, buffer.count)
+            secureZeroMemory(buffer.baseAddress!, buffer.count, 0, buffer.count)
         }
     }
 }

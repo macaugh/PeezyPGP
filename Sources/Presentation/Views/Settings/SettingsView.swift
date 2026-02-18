@@ -6,12 +6,12 @@ import LocalAuthentication
 
 struct SettingsView: View {
     @EnvironmentObject var appState: AppState
-    @AppStorage("requireBiometric") private var requireBiometric = true
+    @AppStorage("requireBiometric") private var requireBiometric = false
     @AppStorage("autoClearClipboard") private var autoClearClipboard = true
     @AppStorage("clipboardClearDelay") private var clipboardClearDelay = 60
 
     @State private var showingDeleteAllAlert = false
-    @State private var biometricType: LABiometryType = .none
+    @State private var biometricType: LABiometryType = LABiometryType.none
 
     var body: some View {
         NavigationStack {
@@ -190,7 +190,9 @@ struct AboutView: View {
             }
         }
         .navigationTitle("About")
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }
 
@@ -271,7 +273,9 @@ struct PrivacyPolicyView: View {
             .padding()
         }
         .navigationTitle("Privacy")
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }
 

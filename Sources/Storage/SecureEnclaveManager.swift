@@ -296,29 +296,35 @@ public final class HardwareBackedKeyStorage {
             return
         }
 
-        // Ensure Secure Enclave KEK exists
-        try secureEnclaveManager.ensureKEKExists()
+        do {
+            // Ensure Secure Enclave KEK exists
+            try secureEnclaveManager.ensureKEKExists()
 
-        // For private keys, add Secure Enclave wrapping
-        if key.isPrivate, let encryptedPrivKey = key.encryptedPrivateKey {
-            let wrappedPrivKey = try secureEnclaveManager.wrap(
-                SecureBytes(data: encryptedPrivKey)
-            )
-
-            // Create modified key with wrapped private key data
-            var wrappedKey = key
-            wrappedKey.encryptedPrivateKey = wrappedPrivKey
-
-            if let encSubkey = key.encryptedEncryptionPrivateKey {
-                wrappedKey.encryptedEncryptionPrivateKey = try secureEnclaveManager.wrap(
-                    SecureBytes(data: encSubkey)
+            // For private keys, add Secure Enclave wrapping
+            if key.isPrivate, let encryptedPrivKey = key.encryptedPrivateKey {
+                let wrappedPrivKey = try secureEnclaveManager.wrap(
+                    SecureBytes(data: encryptedPrivKey)
                 )
-            }
 
-            try keychainManager.storeKey(wrappedKey, requireBiometric: requireBiometric)
-        } else {
-            // Public key - just store in Keychain
-            try keychainManager.storeKey(key, requireBiometric: false)
+                // Create modified key with wrapped private key data
+                var wrappedKey = key
+                wrappedKey.encryptedPrivateKey = wrappedPrivKey
+
+                if let encSubkey = key.encryptedEncryptionPrivateKey {
+                    wrappedKey.encryptedEncryptionPrivateKey = try secureEnclaveManager.wrap(
+                        SecureBytes(data: encSubkey)
+                    )
+                }
+
+                try keychainManager.storeKey(wrappedKey, requireBiometric: requireBiometric)
+            } else {
+                // Public key - just store in Keychain
+                try keychainManager.storeKey(key, requireBiometric: false)
+            }
+        } catch {
+            // Secure Enclave unavailable (e.g. missing entitlement, no team signing) —
+            // fall back to Keychain-only storage
+            try keychainManager.storeKey(key, requireBiometric: requireBiometric)
         }
     }
 

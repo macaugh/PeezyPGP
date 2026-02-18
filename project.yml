@@ -2,8 +2,8 @@ name: PeezyPGP
 options:
   bundleIdPrefix: com.peezypgp
   deploymentTarget:
-    iOS: "15.0"
-    macOS: "12.0"
+    iOS: "16.0"
+    macOS: "13.0"
   xcodeVersion: "15.0"
   generateEmptyDirectories: true
 
