@@ -27,6 +27,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.peezypgp.ios
+        PRODUCT_MODULE_NAME: PeezyPGP
         TARGETED_DEVICE_FAMILY: "1,2"
         SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: YES
     info:
@@ -42,8 +43,20 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.peezypgp.macos
-        MACOSX_DEPLOYMENT_TARGET: "12.0"
+        PRODUCT_MODULE_NAME: PeezyPGP
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
     info:
       path: Configuration/Info.plist
     entitlements:
       path: Configuration/PeezyPGP.entitlements
+
+  PeezyPGP-macOSTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: PeezyPGP-macOS
+    settings:
+      base:
+        MACOSX_DEPLOYMENT_TARGET: "13.0"

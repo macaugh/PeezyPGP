@@ -1,7 +1,8 @@
 # PeezyPGP
 
+[![Tests](https://github.com/macaugh/PeezyPGP/actions/workflows/test.yml/badge.svg)](https://github.com/macaugh/PeezyPGP/actions/workflows/test.yml)
 [![Swift](https://img.shields.io/badge/Swift-5.9-F05138.svg?logo=swift&logoColor=white)](https://swift.org)
-[![Platform](https://img.shields.io/badge/platform-iOS%2015%2B%20%7C%20macOS%2012%2B-lightgrey.svg?logo=apple)](https://developer.apple.com)
+[![Platform](https://img.shields.io/badge/platform-iOS%2016%2B%20%7C%20macOS%2013%2B-lightgrey.svg?logo=apple)](https://developer.apple.com)
 [![RFC 9580](https://img.shields.io/badge/spec-RFC%209580-0057b7.svg)](https://www.rfc-editor.org/rfc/rfc9580)
 [![License](https://img.shields.io/badge/license-MIT-22c55e.svg)](LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-purple.svg)]()
